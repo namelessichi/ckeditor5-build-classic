@@ -29,8 +29,14 @@ import Table from '@ckeditor/ckeditor5-table/src/table';
 import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
 
 import Alignment from '@ckeditor/ckeditor5-alignment/src/alignment';
+import Underline from '@ckeditor/ckeditor5-basic-styles/src/underline';
+import Strikethrough from '@ckeditor/ckeditor5-basic-styles/src/strikethrough';
+import Code from '@ckeditor/ckeditor5-basic-styles/src/code';
+import Subscript from '@ckeditor/ckeditor5-basic-styles/src/subscript';
+import Superscript from '@ckeditor/ckeditor5-basic-styles/src/superscript';
 
-export default class ClassicEditor extends ClassicEditorBase {}
+export default class ClassicEditor extends ClassicEditorBase {
+}
 
 // Plugins to include in the build.
 ClassicEditor.builtinPlugins = [
@@ -39,6 +45,11 @@ ClassicEditor.builtinPlugins = [
 	Autoformat,
 	Bold,
 	Italic,
+	Underline,
+	Strikethrough,
+	Code,
+	Subscript,
+	Superscript,
 	BlockQuote,
 	CKFinder,
 	EasyImage,
@@ -65,8 +76,7 @@ ClassicEditor.defaultConfig = {
 			'heading',
 			'|',
 			'alignment',
-			'bold',
-			'italic',
+			'bold', 'italic', 'underline', 'strikethrough', 'code', 'subscript', 'superscript',
 			'link',
 			'bulletedList',
 			'numberedList',
@@ -82,6 +92,9 @@ ClassicEditor.defaultConfig = {
 		toolbar: [
 			'imageStyle:full',
 			'imageStyle:side',
+			'imageStyle:alignLeft',
+			'imageStyle:alignCenter',
+			'imageStyle:alignRight',
 			'|',
 			'imageTextAlternative'
 		]
